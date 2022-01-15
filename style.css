@@ -8,9 +8,10 @@
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
-    background: #ECE9E6;
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); 
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: #ADA996;  
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,4 +48,28 @@ header button {
     font-size: 1.5rem;
     margin-left: 10px;
 }
+
+.fav-container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.fav-meals {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li {
+
+}
+
+.fav-meals li img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+
+}
+
 
