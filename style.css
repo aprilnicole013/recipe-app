@@ -8,10 +8,9 @@
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
-    background: #ADA996;  
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +23,10 @@ img {
 }
 
 .mobile-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #3333331A;
+    border-radius: 3px;
+    overflow: hidden;
     width: 400px;
 }
 
@@ -50,25 +53,38 @@ header button {
 }
 
 .fav-container {
+    background-color: #FFF5EE;
     padding: 1rem;
     text-align: center;
 }
 
 .fav-meals {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
 }
 
 .fav-meals li {
+    margin: 5px;
+    width: 75px;
 
 }
 
 .fav-meals li img {
+    border: 2pm solid #ffffff;
     border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331A;
     object-fit: cover;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+
+}
+
+.fav-meals li span {
+    font-size: 0.9rem;
 
 }
 
