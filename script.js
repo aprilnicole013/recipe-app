@@ -20,9 +20,10 @@ async function getMealById(id){
 }
 
 async function getMealsBySearch(term){
-    const mearTerms = await fetch('www.themealdb.com/api/json/v1/1/search.php?s=' + term)
+    const mealTerms = await fetch('www.themealdb.com/api/json/v1/1/search.php?s=' + term)
 }
-function addMeal(mealData, random){
+
+function addMeal(mealData, random = false){
     const meal = document.createElement("div")
     meal.classList.add("meal")
 
@@ -34,14 +35,16 @@ function addMeal(mealData, random){
             <span class="random">Random Recipe</span>`
                 : ''
             }
-            <img src="${mealData.strMealThumb}" alt="veggie soup"/>
+            <img src="${mealData.strMealThumb}" alt="${mealData.Meal}"/>
         </div>
     
         <div class="meal-body">
-            <h4>VegSoup</h4>
+            <h4>${mealData.strMeal}</h4>
             <button class="fav-btn">
                 <i class="fas fa-heart"></i>
             </button>
         </div>
-    `
+    `;
+
+    meals.appendChild(meal)
 };
