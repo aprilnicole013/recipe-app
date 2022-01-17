@@ -115,6 +115,7 @@ header button {
 .meal {
     border-radius: 3px;
     box-shadow: 0 0 10px 2px #3333331A;
+    cursor: pointer;
     margin: 1.5rem;
     overflow: hidden;
 }
