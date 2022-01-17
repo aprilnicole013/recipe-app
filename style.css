@@ -62,7 +62,6 @@ header button {
 .fav-meals {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     list-style-type: none;
     padding: 0;
@@ -84,7 +83,7 @@ header button {
     position: absolute;
     top: -0.5rem;
     right: -0.5rem;
-    font-size: 1.2rem;;
+    font-size: 1.2rem;
 }
 
 .fav-meals li:hover .clear {
@@ -92,13 +91,12 @@ header button {
 }
 
 .fav-meals li img {
-    border: 2pm solid #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 50%;
     box-shadow: 0 0 10px 2px #3333331A;
     object-fit: cover;
     width: 70px;
     height: 70px;
-
 }
 
 .fav-meals li span {
@@ -108,9 +106,6 @@ header button {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 75px;
-    position: absolute;
-    bottom: -1rem;
-    left: 0;
 }
 
 .meal {
@@ -189,7 +184,6 @@ header button {
     max-height: 100vh;
     max-width: 600px;
     width: 100%;
-
 }
 
 .popup .close-popup {
