@@ -161,7 +161,7 @@ header button {
     color: salmon;
 }
 
-.meal-info-container {
+.popup-container {
     position: fixed;
     display: flex;
     align-items: center;
@@ -173,12 +173,12 @@ header button {
     bottom: 0;
 }
 
-.meal-info-container hidden {
+.popup-container.hidden {
     opacity: 0;
     pointer-events: none;
 }
 
-.meal-info {
+.popup {
     background-color: #fff;
     padding: 0 2rem;
     border-radius: 5px;
@@ -187,11 +187,7 @@ header button {
 
 }
 
-.meal-info h1 {
-    text-align: center;
-}
-
-.meal-info .close-popup {
+.popup .close-popup {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -199,4 +195,8 @@ header button {
     position: absolute;
     top: 1rem;
     right: 1rem;
+}
+
+.meal-info h1 {
+    text-align: center;
 }
