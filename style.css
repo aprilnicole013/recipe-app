@@ -161,3 +161,21 @@ header button {
     color: salmon;
 }
 
+.meal-info-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.meal-info {
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+
+}
