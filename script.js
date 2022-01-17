@@ -126,7 +126,7 @@ async function fetchFavMeals(){
 }
 
 function addMealFav(mealData){
-    const favMeal = document.createElement("li")
+    const favMeal = document.createElement("li");
 
     meal.innerHTML = `
             <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}">
@@ -157,12 +157,33 @@ function showMealInfo(mealData){
     //update meal info
     const mealEl = document.createElement('div')
 
+    const ingredients = []
+
+    //get ingredients and measurements (20)
+    for(let i = 0; i < 20; i++){
+        if(mealData['strIngredient' + i]){
+            ingredients.push(`
+            ${mealData['strIngredient' + i]} 
+            - ${mealData['strMeasure' + i]}
+            `)
+        } else {
+            break;
+        }
+    }
+
     mealEl.innerHTML = `
         <h1>${mealData.strMeal}</h1>
             <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}">
             <p>
             ${mealData.strInstructions}
             </p>
+            <h3>Ingredients:</h3>
+            <ul>
+            ${ingredients.map((ing) =>`
+                <li>${ing}</li>
+                `)
+                .join('')}
+            </ul>
     `
 
     mealInfoEl.appendChild(mealEl)
