@@ -1,4 +1,5 @@
-const meals = document.getElementById('meals')
+const mealsEl = document.getElementById('meals');
+const favoriteContainer = document.getElementById('fav-meals')
 
 getRandomMeal();
 fetchFavMeals();
@@ -65,7 +66,7 @@ function addMeal(mealData, random = false){
         fetchFavMeals()
     })
 
-    meals.appendChild(meal)
+    mealsEl.appendChild(meal)
 };
 
 function addMealLS(mealId){
@@ -75,7 +76,7 @@ function addMealLS(mealId){
 }
 
 function removeMealLS(mealId){
-    const mealIds = getMealsLS()
+    const mealIds = getMealsLS();
 
     localStorage.setItem('mealIds', JSON.stringify(mealIds.filter((id) => id !== mealId))
     )
@@ -96,9 +97,26 @@ async function fetchFavMeals(){
 
         meal = await getMealById(mealId)
 
+        addMealFav()
         meals.push(meal)
     }
 
     console.log(meals)
     //add to screen
 }
+
+function addMealFav(mealData){
+    const favMeal = document.createElement("li")
+
+    meal.innerHTML = `
+        <li>
+            <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}">
+            <span>${mealData.strMeal}</span>
+        </li>
+    `;
+
+    favoriteContainer.appendChild(favMeal)
+};
+
+
+
