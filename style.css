@@ -69,6 +69,7 @@ header button {
 }
 
 .fav-meals li {
+    cursor: pointer;
     position: relative;
     margin: 5px;
     width: 75px;
@@ -182,7 +183,10 @@ header button {
 .popup {
     background-color: #fff;
     padding: 0 2rem;
+    position: relative;
+    overflow: auto;
     border-radius: 5px;
+    max-height: 100vh;
     max-width: 600px;
     width: 100%;
 

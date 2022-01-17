@@ -143,10 +143,17 @@ function addMealFav(mealData){
         fetchFavMeals();
     })
 
+    favMeal.addEventListener('click', () => {
+        showMealInfo(mealData)
+    })
+
     favoriteContainer.appendChild(favMeal)
 };
 
 function showMealInfo(mealData){
+    //clean it up
+    mealInfoEl.innerHTML = '';
+
     //update meal info
     const mealEl = document.createElement('div')
 
