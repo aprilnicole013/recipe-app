@@ -142,7 +142,11 @@ function addMealFav(mealData){
 searchBtn.addEventListener('click', async () => {
     const search = searchTerm.value;
 
-    console.log(await getMealsBySearch(search))
+    const meals = await getMealsBySearch(search)
+
+    meals.forEach((meal) => {
+        addMeal(meal)
+    })
 })
 
 
