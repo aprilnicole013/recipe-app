@@ -22,7 +22,7 @@ async function getRandomMeal(){
 }
 
 async function getMealById(id){
-    const resp = await fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id);
+    const resp = await fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id);
 
     const respData = await resp.json();
 
@@ -105,7 +105,6 @@ function getMealsLS(){
 async function fetchFavMeals(){
     //clean container
     favoriteContainer.innerHTML = "";
-    
     const mealIds = getMealsLS()
 
     for(let i = 0; i < mealIds.length; i++){
@@ -131,7 +130,7 @@ function addMealFav(mealData){
 
     const closeBtn = favMeal.querySelector('.clear')
 
-    closeBtn.addEventListener('click', ()=> {
+    closeBtn.addEventListener('click', () => {
         removeMealLS(mealData.idMeal)
 
         fetchFavMeals();
